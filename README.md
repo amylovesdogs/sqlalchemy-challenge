@@ -2,7 +2,7 @@
 DU Data Analysis SQL Alchemy Challenge
 
 ## Part 1: Analyze and Explore the Climate Data
-Data is stored in **Resources/hawaii.sqlite**, a sqllite database. Connected, loaded and mapped via SQL Alchemy.
+Data is stored in **SurfsUp/Resources/hawaii.sqlite**, a sqllite database. Connected, loaded and mapped via SQL Alchemy. This code is in a jupyter notebook and can be found in **SurfsUp/climate.ipynb**.
 
 ### Precipitation Analysis
 The following analysis is done:
@@ -27,3 +27,10 @@ The following analysis is done:
 * Plot the results as a histogram with bins=12.
 
 ## Part 2: Climate App with Flask
+Part 2 is a flask app that provides the following API routes. The flask app can be found in **SurfsUp/app.py**. All values returned are in JSON format. All dates in routes must be in YYYY-MM-DD format.
+
+* **/** List all the available routes.
+* **/api/v1.0/precipitation** Returns the las 12 months of precipitation data
+* **/api/v1.0/stations** Returns the las 12 months of temperature data for the most active weather station
+* **/api/v1.0/<start_date>** Return the minimum, maximum and average temperatures for all dates starting with <start_date>
+* **/api/v1.0/<start_date>/<end_date>** Return the minimum, maximum and average temperatures for all dates between <start_date> and <end_date> inclusive.
